@@ -332,11 +332,14 @@
                 </div>
               </div>
             </address>
-            <form id="hire-me-form">
+
+            <form id="hire-me-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="063c1d2a-2784-42fa-adc9-30d46d51f6e0">
               <label for="hire-name" class="sr-only">Your name</label>
               <input
                 id="hire-name"
                 type="text"
+                name="name"
                 autocomplete="name"
                 class="input"
                 placeholder="Your name"
@@ -345,6 +348,7 @@
               <input
                 id="hire-email"
                 type="email"
+                name="email"
                 autocomplete="email"
                 class="input"
                 placeholder="Your email"
@@ -353,6 +357,7 @@
               <textarea
                 id="hire-message"
                 class="input"
+                name="message"
                 placeholder="Your message"
               ></textarea>
               <div class="hire-action">
