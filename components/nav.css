@@ -1,0 +1,29 @@
+.nav {
+    padding-block: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+@media (width <= 52rem) {
+    .nav-links li:not(:last-child) {
+        display: none;
+        /* Elements are still in DOM. But they are not in render tree. */
+        /* visibility: hidden; */
+        /* Difference b/w display none and visibility hidden is that check the size of the flex item ul. 
+        If none, then size of ul is size of hire me button. If visibility is hidden then size of ul is 
+        size of all links as they are not yet taken out of render tree. */
+    }
+}
+
+/* 
+Diff b/w DOM and render tree
+https://web.dev/critical-rendering-path-render-tree-construction/
+*/

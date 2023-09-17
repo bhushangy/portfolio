@@ -1,0 +1,29 @@
+.layout-section {
+  /* padding-bottom: 200px; */
+  padding-bottom: clamp(100px, 20vw, 200px);
+  /* See here we are using padding to increase box size and at the 
+  same time also act as separation from the next element below */
+  /* Either use the above or use media query */
+  scroll-margin-top: 20px;
+  /* The property is applied on section. When the section is scrolled 
+  to the top of the screen, a 20px gap is left so that the section does not touch the top.*/
+}
+
+.layout-section-title {
+  margin-bottom: 36px;
+}
+
+.layout-grid-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+@media (max-width: 37.5rem) {
+  /* .layout-section {
+      padding-bottom: 100px;
+  } */
+  .layout-grid-half {
+    grid-template-columns: 1fr;
+  }
+}

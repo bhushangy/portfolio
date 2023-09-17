@@ -1,0 +1,38 @@
+.tags {
+  padding-left: 0;
+}
+
+.tags li {
+  --tag-color: var(--gray);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  display: inline-block;
+  border: 1px solid var(--tag-color);
+  padding: 12px 16px;
+  margin: 8px;
+  margin-left: 0;
+  position: relative;
+  outline: 1px solid transparent;
+}
+
+.tags li::before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 1px solid var(--tag-color);
+}
+
+/* When hover class is active on an li, we the below class targets the same li as the .tags li selector.
+   So specificity comes into play. .tags li:hover is more specific than .tags li
+   So similar styles in .tags li:hover will override the styles in .tags li
+   So --tag-color: var(--primary); will override --tag-color: var(--gray);
+   Thus border color will now be var(--primary) instead of var(--gray)
+*/
+.tags li:hover {
+  --tag-color: var(--primary);
+  color: var(--primary);
+  outline-color: var(--primary);
+}

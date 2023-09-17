@@ -1,0 +1,94 @@
+:root {
+  --primary: #f2d544;
+  --dark-blue: #130c24;
+  --black: #232020;
+  --gray: #999999;
+  --beige: #f5f5f1;
+  --gap: clamp(10px, 5vw, 80px); /* Very important dynamic property clamp */
+
+  /* theme dependent variables */
+  --text-color: white;
+  --light-icon: white;
+  --gray-dark: #666666;
+  --gray-light: #bdbdbd;
+  --dark-icon: var(--black);
+  --anchor-color: var(--primary);
+}
+
+/* OR: you can use use clamp(30px, 10vw, 80px) in the first :root declaration. You can then remove the media query */
+/* @media (max-width: 37.5rem) {
+    :root {
+        --gap: 30px;
+    }
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--dark-blue);
+  color: var(--text-color);
+}
+
+html.light-theme {
+  background-color: var(--beige);
+  --text-color: var(--black);
+  --light-icon: var(--black);
+  --gray-light: var(--gray-dark);
+  --dark-icon: white;
+  --anchor-color: var(--black);
+}
+
+body {
+  font-family: "Poppins", sans-serif, system-ui;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--black);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 
+The initial value (not attribute) denotes the initial value of the property, 
+as defined in CSS specifications: “The ‘initial’ keyword represents the specified 
+value that is designated as the property's initial value.” Thus, its meaning depends 
+on the property, but not on anything else, e.g. not on the browser or on the element 
+that the property is being applied to. So it does not mean browser default.
+
+For example, for the display property, initial always means inline, because that’s the designated 
+initial value of the property. In the example case, the browser default is block, since the element is div. 
+*/
+
+@media (max-width: 37.5rem) {
+  /* Not needed as we are using clamp */
+  /* :root {
+      --gap: 30px;
+  } */
+  html {
+    font-size: 70%; /* as long as the smallest font is still legible */
+  }
+}

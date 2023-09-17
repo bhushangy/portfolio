@@ -1,0 +1,28 @@
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* grid-template-columns: auto 1fr; */
+  gap: var(--gap);
+  margin-bottom: 100px;
+}
+
+.portfolio:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-screenshot {
+  /* border-radius: 50%; */
+  width: clamp(175px, 20vw, 300px);
+  height: clamp(175px, 20vw, 300px);
+}
+
+.portfolio:nth-child(odd) .portfolio-screenshot {
+  order: 1;
+}
+
+@media (max-width: 37.5rem) {
+  .portfolio {
+    display: block;
+  }
+}
