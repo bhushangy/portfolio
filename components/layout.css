@@ -4,7 +4,7 @@
   /* See here we are using padding to increase box size and at the 
   same time also act as separation from the next element below */
   /* Either use the above or use media query */
-  scroll-margin-top: 20px;
+  scroll-margin-top: 50px;
   /* The property is applied on section. When the section is scrolled 
   to the top of the screen, a 20px gap is left so that the section does not touch the top.*/
 }
