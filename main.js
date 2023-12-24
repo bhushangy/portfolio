@@ -19,7 +19,7 @@ if (prefersLight) {
 }
 
 document.querySelector("#scroll-down").addEventListener("click", () => {
-  window.scrollTo({ top: document.querySelector("#about-me").offsetTop - 20 });
+  window.scrollTo({ top: document.querySelector("#about-me").offsetTop - 50 });
 });
 
 // document.querySelector("#hire-me-form").addEventListener("submit", (e) => {
