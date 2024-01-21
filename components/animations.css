@@ -1,0 +1,67 @@
+#intro-h1 {
+	animation-name: clip-headings;
+	animation-duration: 1.25s;
+	animation-timing-function: linear;
+}
+
+#intro-h2 {
+	animation-name: fade-in-heading;
+	animation-duration: 1.5s;
+	animation-delay: 0.6s;
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+
+.intro-p1 {
+	animation-name: fade-in-paragraph;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-delay: 1.4s;
+	animation-fill-mode: both;
+}
+
+.intro-p2 {
+	animation-name: fade-in-paragraph;
+	animation-duration: 1.5s;
+	animation-delay: 1.8s;
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+
+@keyframes clip-headings {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+
+	50% {
+		clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+	}
+
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+}
+
+@keyframes fade-in-paragraph {
+	from {
+		opacity: 0;
+		transform: translate(10%, 10%) scale(1.2);
+	}
+
+	to,
+	50% {
+		opacity: 1;
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+@keyframes fade-in-heading {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to,
+	50% {
+		transform: none;
+	}
+}
