@@ -5,9 +5,9 @@
 }
 
 #intro-h2 {
-	animation-name: fade-in-heading;
+	animation-name: clip-headings;
 	animation-duration: 1.5s;
-	animation-delay: 0.6s;
+	animation-delay: 0.7s;
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 }
@@ -26,6 +26,12 @@
 	animation-delay: 1.8s;
 	animation-timing-function: linear;
 	animation-fill-mode: both;
+}
+
+.nav-hire-me {
+	animation-name: shake;
+	animation-duration: 1.5s;
+	animation-delay: 2.5s;
 }
 
 @keyframes clip-headings {
@@ -55,13 +61,20 @@
 	}
 }
 
-@keyframes fade-in-heading {
-	from {
-		transform: translateX(-100%);
+@keyframes shake {
+
+	from,
+	to {
+		transform: translateX(0);
 	}
 
-	to,
-	50% {
-		transform: none;
+	20%,
+	60% {
+		transform: translateX(-10px);
+	}
+
+	40%,
+	80% {
+		transform: translateX(10px);
 	}
 }
