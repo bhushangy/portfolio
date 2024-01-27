@@ -29,6 +29,7 @@
 html {
   background-color: var(--dark-blue);
   color: var(--text-color);
+  transition: all 0.5s;
 }
 
 html.light-theme {
