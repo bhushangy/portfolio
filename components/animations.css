@@ -1,13 +1,15 @@
 #intro-h1 {
 	animation-name: clip-headings;
+	animation-delay: 0.3s;
 	animation-duration: 1.25s;
 	animation-timing-function: linear;
+	animation-fill-mode: both;
 }
 
 #intro-h2 {
 	animation-name: clip-headings;
 	animation-duration: 1.5s;
-	animation-delay: 0.7s;
+	animation-delay: 1s;
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 }
@@ -16,14 +18,14 @@
 	animation-name: fade-in-paragraph;
 	animation-duration: 1.5s;
 	animation-timing-function: linear;
-	animation-delay: 1.4s;
+	animation-delay: 1.8s;
 	animation-fill-mode: both;
 }
 
 .intro-p2 {
 	animation-name: fade-in-paragraph;
 	animation-duration: 1.5s;
-	animation-delay: 1.8s;
+	animation-delay: 2.2s;
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 }
@@ -31,7 +33,7 @@
 .nav-hire-me {
 	animation-name: shake;
 	animation-duration: 1.5s;
-	animation-delay: 2.5s;
+	animation-delay: 2.9s;
 }
 
 @keyframes clip-headings {
