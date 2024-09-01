@@ -1,7 +1,7 @@
 #intro-h1 {
 	animation-name: clip-headings;
 	animation-delay: 0.3s;
-	animation-duration: 1.25s;
+	animation-duration: 1.75s;
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 }
