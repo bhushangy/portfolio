@@ -1,4 +1,4 @@
-#intro-h1 {
+/* #intro-h1 {
 	animation-name: clip-headings;
 	animation-delay: 0.3s;
 	animation-duration: 1.75s;
@@ -29,54 +29,54 @@
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 }
+*/
 
 .nav-hire-me {
-	animation-name: shake;
-	animation-duration: 1.5s;
-	animation-delay: 2.9s;
+  animation-name: shake;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
 }
 
-@keyframes clip-headings {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
+/* @keyframes clip-headings {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
 
-	50% {
-		clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-	}
+  50% {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
 
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-	}
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 @keyframes fade-in-paragraph {
-	from {
-		opacity: 0;
-		transform: scale(1.1);
-	}
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
 
-	to,
-	50% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
+  to,
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
 
 @keyframes shake {
+  from,
+  to {
+    transform: translateX(0);
+  }
 
-	from,
-	to {
-		transform: translateX(0);
-	}
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
 
-	20%,
-	60% {
-		transform: translateX(-10px);
-	}
-
-	40%,
-	80% {
-		transform: translateX(10px);
-	}
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
 }
