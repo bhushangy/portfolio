@@ -7,12 +7,11 @@
   --gap: clamp(10px, 5vw, 80px); /* Very important dynamic property clamp */
 
   /* theme dependent variables */
-  --text-color: white;
-  --light-icon: white;
-  --gray-dark: #666666;
-  --gray-light: #bdbdbd;
-  --dark-icon: var(--black);
-  --anchor-color: var(--primary);
+  --text-color: var(--black);
+  --light-icon: var(--black);
+  --gray-light: #666666;
+  --dark-icon: white;
+  --anchor-color: var(--black);
 }
 
 /* OR: you can use use clamp(30px, 10vw, 80px) in the first :root declaration. You can then remove the media query */
@@ -27,18 +26,18 @@
 }
 
 html {
-  background-color: var(--dark-blue);
+  background-color: var(--beige);
   color: var(--text-color);
   transition: all 0.5s;
 }
 
-html.light-theme {
-  background-color: var(--beige);
-  --text-color: var(--black);
-  --light-icon: var(--black);
-  --gray-light: var(--gray-dark);
-  --dark-icon: white;
-  --anchor-color: var(--black);
+html.dark-theme {
+  background-color: var(--dark-blue);
+  --text-color: white;
+  --light-icon: white;
+  --gray-light: #bdbdbd;
+  --dark-icon: var(--black);
+  --anchor-color: var(--primary);
 }
 
 body {

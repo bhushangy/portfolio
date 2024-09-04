@@ -9,14 +9,14 @@ file and then js script is executed and then the color changes if preference is 
  */
 
 document.querySelector("#toggle-theme").addEventListener("click", () => {
-  document.documentElement.classList.toggle("light-theme");
+  document.documentElement.classList.toggle("dark-theme");
 });
 
-const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-if (prefersLight) {
-  console.log("yes");
-  document.documentElement.classList.add("light-theme");
-}
+// const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+// if (prefersLight) {
+//   console.log("yes");
+//   document.documentElement.classList.add("light-theme");
+// }
 
 document.querySelector("#scroll-down").addEventListener("click", () => {
   window.scrollTo({ top: document.querySelector("#about-me").offsetTop - 50 });
